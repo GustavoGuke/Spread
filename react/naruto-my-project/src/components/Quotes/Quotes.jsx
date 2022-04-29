@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import styled from "styled-components"
 
 export default function Quotes() {

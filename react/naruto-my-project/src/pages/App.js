@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/aria-role */
+
 import styled from 'styled-components'
 import Quotes from '../components/Quotes/Quotes';
 import narutoImg from '../images/naruto.png'
