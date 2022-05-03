@@ -5,7 +5,7 @@ test('renders the app, with a button, a quote and a button', () => {
   render(<App />);
   const buttonEl = screen.getByRole('button');
   const imageEl = screen.getByRole('img')
-  const textEl = screen.getByRole('p')
+  const textEl = screen.getByText('speaker')
 
   // Elementos esperados no test
   expect(buttonEl).toBeInTheDocument();

@@ -1,13 +1,17 @@
 
 import styled from 'styled-components'
-import Quotes from '../components/Quotes/Quotes';
+import { GlobalStyle } from '../GlobalStyle';
+import { Quotes } from '../components/Quotes/Quotes';
 import narutoImg from '../images/naruto.png'
 export function App() {
   return (
+    <>
+    <GlobalStyle/>
     <Content>
-      <Quotes/>
+      <Quotes quote={'test'} speaker={'speaker'}/>
       <NarutoImg src={narutoImg} alt='Naruto Uzumaki'/>
     </Content>
+    </>
   );
 }
 
