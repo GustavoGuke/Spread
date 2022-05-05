@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 import { GlobalStyle } from '../GlobalStyle';
 import { Quotes } from '../components/Quotes/Quotes';
@@ -8,7 +7,7 @@ export function App() {
     <>
     <GlobalStyle/>
     <Content>
-      <Quotes quote={'test'} speaker={'speaker'}/>
+      <Quotes quote={'teste'} speaker={'speaker'}/>
       <NarutoImg src={narutoImg} alt='Naruto Uzumaki'/>
     </Content>
     </>

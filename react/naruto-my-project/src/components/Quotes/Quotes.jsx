@@ -1,13 +1,19 @@
-/* eslint-disable jsx-a11y/aria-role */
 import styled from "styled-components"
+import {string} from 'prop-types'
+import { Button } from "../Button/Button"
 export function Quotes({quote, speaker}) {
   return (
     <Container>
       <Quote >{quote}</Quote>
       <Speaker >{speaker}</Speaker>
-      <button>jutsu</button>
+      <Button name={'jutsu'}/>
     </Container>
   )
+}
+
+Quotes.prototype = {
+  quote: string,
+  speaker: string
 }
 
 const Container = styled.div`
