@@ -1,13 +1,21 @@
 import styled from 'styled-components'
 import { GlobalStyle } from '../GlobalStyle';
 import { Quotes } from '../components/Quotes/Quotes';
+
+
+import getQuote from '../service/quoteService.js'
 import narutoImg from '../images/naruto.png'
 export function App() {
+  
+  const onUpdate = async ()  => {
+    const quote = await getQuote()
+    console.log(quote)
+  }
   return (
     <>
     <GlobalStyle/>
     <Content>
-      <Quotes quote={'teste'} speaker={'speaker'}/>
+      <Quotes  onClick={onUpdate} quote={'teste'} speaker={'speaker'}/>
       <NarutoImg src={narutoImg} alt='Naruto Uzumaki'/>
     </Content>
     </>

@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import {string} from 'prop-types'
 import { Button } from "../Button/Button"
-export function Quotes({quote, speaker}) {
+export function Quotes({quote, speaker, onClick}) {
   return (
     <Container>
       <Quote >{quote}</Quote>
       <Speaker >{speaker}</Speaker>
-      <Button name={'jutsu'}/>
+      <Button onClick={onClick} name={'jutsu'}/>
     </Container>
   )
 }

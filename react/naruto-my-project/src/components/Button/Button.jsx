@@ -1,7 +1,7 @@
 import styled from "styled-components"
-export const Button = ({name}) => {
+export const Button = ({name, onClick}) => {
   return (
-    <ButtonStyled>{name}</ButtonStyled>
+    <ButtonStyled onClick={onClick}>{name}</ButtonStyled>
   )
 }
 let cor = '#f5f1ef'
