@@ -6,7 +6,6 @@ export default function IfoodCounter() {
   const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active")
 
   useEffect(() => {
-    console.log('value mudo')
   },[value])
   function handleDown(){
     if( value <=1){
