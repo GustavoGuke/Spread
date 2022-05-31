@@ -1,12 +1,16 @@
-
+import { GlobalStyle } from './components/Global/GlobalStyle'
+import Layout from './components/Layout'
+import Profile from './components/Profile'
 
 function App() {
 
   return (
-    <div >
-      Projeto dio
-    
-    </div>
+  <main>
+    <GlobalStyle/>
+    <Layout>
+      <Profile />
+    </Layout>
+  </main>
   )
 }
 
