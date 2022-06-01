@@ -1,3 +1,5 @@
+import './index.css'
+
 import { GlobalStyle } from './components/Global/GlobalStyle'
 import Layout from './components/Layout'
 import Profile from './components/Profile'
