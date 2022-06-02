@@ -11,7 +11,7 @@ export default function Profile() {
                     <div>
                         <h1>Nome usuário</h1>
                         <div className='flex gap-3 pt-3'>
-                        <h2>UserName:</h2> <span>Gustavo</span>
+                        <h2>UserName:</h2> <a href="https://github.com/GustavoGuke" target="_blank" rel='noreferrer'>Gustavo</a>
                         </div>
                     </div>
 
