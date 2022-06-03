@@ -1,4 +1,5 @@
 import React from 'react'
+import RepositoryItem from '../RepositoryItem'
 import * as S from './styled'
 
 export default function Repositories() {
@@ -13,8 +14,20 @@ export default function Repositories() {
                     <S.ContaierTab>Starred</S.ContaierTab>
                 </S.ContaierTabList>
 
-                    <S.ContaierTabPanel>Panel Repositories</S.ContaierTabPanel>
-                    <S.ContaierTabPanel>Panel Starred</S.ContaierTabPanel>
+                    <S.ContaierTabPanel>Panel Repositories
+                        <RepositoryItem
+                        name="name"
+                        fullname="fullname"
+                        link="https://github.com/GustavoGuke/app-biblia.io"
+                        />
+                    </S.ContaierTabPanel>
+                    <S.ContaierTabPanel>Panel Starred
+                    <RepositoryItem
+                      name="name"
+                      fullname="fullname"
+                      link="https://github.com/GustavoGuke/app-biblia.io"
+                    />
+                    </S.ContaierTabPanel>
             </S.ContaierTabs>
         </>
     )

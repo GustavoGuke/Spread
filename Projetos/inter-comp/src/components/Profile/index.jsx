@@ -1,7 +1,9 @@
 import React from 'react'
+import GithubHooks from '../../Hooks/GithubHooks'
 import * as S from './styled'
 
 export default function Profile() {
+    const {gitHub} = GithubHooks()
     return (
 
         <S.Container>
@@ -9,7 +11,7 @@ export default function Profile() {
                 <img className='rounded-full w-56 ml-10' src="https://avatars.githubusercontent.com/u/62183532?v=4" alt="avatar do usuario" />
                 <div>
                     <div>
-                        <h1>Nome usuário</h1>
+                        <h1>{gitHub.user.name}</h1>
                         <div className='flex gap-3 pt-3'>
                         <h2>UserName:</h2> <a href="https://github.com/GustavoGuke" target="_blank" rel='noreferrer'>Gustavo</a>
                         </div>
