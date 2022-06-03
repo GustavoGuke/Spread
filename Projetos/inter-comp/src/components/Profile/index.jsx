@@ -11,26 +11,36 @@ export default function Profile() {
                 <img className='rounded-full w-56 ml-10' src="https://avatars.githubusercontent.com/u/62183532?v=4" alt="avatar do usuario" />
                 <div>
                     <div>
+                        <div><span>{gitHub.user.login}</span></div>
                         <h1>{gitHub.user.name}</h1>
                         <div className='flex gap-3 pt-3'>
-                        <h2>UserName:</h2> <a href="https://github.com/GustavoGuke" target="_blank" rel='noreferrer'>Gustavo</a>
+                        <h2>UserName:</h2> 
+                        <a 
+                        href={gitHub.user.html_url} 
+                        target="_blank" 
+                        rel='noreferrer'>Gustavo</a>
                         </div>
+                        <div><span>{gitHub.user.bio}</span></div>
                     </div>
 
                     <div className='flex gap-5 pt-5'>
                         <section>
                             <h3>Followers</h3>
-                            <span>5</span>
+                            <span>{gitHub.user.followers}</span>
                         </section>
 
                         <section>
-                            <h3>Followers</h3>
-                            <span>5</span>
+                            <h3>Following</h3>
+                            <span>{gitHub.user.following}</span>
                         </section>
 
                         <section>
-                            <h3>Followers</h3>
-                            <span>5</span>
+                            <h3>Gists</h3>
+                            <span>{gitHub.user.public_gists}</span>
+                        </section>
+                        <section>
+                            <h3>Repos</h3>
+                            <span>{gitHub.user.public_repos}</span>
                         </section>
                     </div>
                 </div>

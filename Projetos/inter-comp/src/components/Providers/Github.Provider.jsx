@@ -12,12 +12,12 @@ export default function GithubProvider({ children }) {
         user: {
             login: 'undefined',
             name: 'undefined',
-            puclicCurl: undefined,
+            html_url: undefined,
             bio: undefined,
             following: 0,
             followers: 0,
-            puclic_repos: 0,
-            puclic_gists: 0
+            public_repos: 0,
+            public_gists: 0,
         },
         repositories: [],
         starred: []
