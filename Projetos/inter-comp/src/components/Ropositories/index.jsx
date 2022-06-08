@@ -6,8 +6,7 @@ import * as S from './styled'
 export default function Repositories() {
     const { gitHub, getUserRepos } = GithubHooks()
     const [repos, setRepos] = useState(false)
-    console.log(gitHub.user.login)
-
+    
     useEffect(() => {
         if ( !!gitHub.user.login) {
             getUserRepos(gitHub.user.login)

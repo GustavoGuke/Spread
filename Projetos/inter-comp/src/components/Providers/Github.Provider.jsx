@@ -63,7 +63,6 @@ export default function GithubProvider({ children }) {
     const getUserRepos = (username) => {
         api.get(`users/${username}/repos`)
             .then(({ data }) => {
-                console.log(`data: ${JSON.stringify(data)}`);
                 setGithub((prevState) => ({
                     ...prevState,
                     repositories:data,

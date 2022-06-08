@@ -11,11 +11,13 @@ function App() {
   return (
     <main className='text-white'>
       <GithubProvider>
+
         <GlobalStyle />
         <Layout>
           <Profile />
           <Repositories />
         </Layout>
+        
       </GithubProvider>
     </main>
   )
