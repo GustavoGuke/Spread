@@ -15,7 +15,8 @@ export default function GithubProvider({ children }) {
     const [gitHub, setGithub] = useState({
         loading: false,
         user: {
-            login: 'Pesquise um Repositorio',
+            id: undefined,
+            login: undefined,
             name: 'O nome do usuário apararecera aqui',
             html_url: undefined,
             bio: undefined,
@@ -39,6 +40,7 @@ export default function GithubProvider({ children }) {
                 setGithub((prevState) => ({
                     ...prevState,
                     user: {
+                        id: data.id,
                         login: data.login,
                         name: data.name,
                         html_url: data.html_url,
@@ -57,9 +59,21 @@ export default function GithubProvider({ children }) {
                 }))
             })
     }
+
+    const getUserRepos = (username) => {
+        api.get(`users/${username}/repos`)
+            .then(({ data }) => {
+                console.log(`data: ${JSON.stringify(data)}`);
+                setGithub((prevState) => ({
+                    ...prevState,
+                    repositories:data,
+                }))
+            })
+    }
     const contextValue = {
         gitHub,
         getUser: useCallback((username) => getUser(username), []),
+        getUserRepos: useCallback((username) => getUserRepos(username), []),
     }
     return (
         <GithubContext.Provider value={contextValue}>
