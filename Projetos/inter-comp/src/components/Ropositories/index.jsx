@@ -1,8 +1,10 @@
 import React from 'react'
 import RepositoryItem from '../RepositoryItem'
+import GithubHooks from '../../Hooks/GithubHooks'
 import * as S from './styled'
 
 export default function Repositories() {
+    const {gitHub} = GithubHooks()
     return (
         <>
             <S.ContaierTabs
