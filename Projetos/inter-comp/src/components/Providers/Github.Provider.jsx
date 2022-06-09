@@ -69,10 +69,21 @@ export default function GithubProvider({ children }) {
                 }))
             })
     }
+
+    const getUserStarred = (username) => {
+        api.get(`users/${username}/starred`)
+            .then(({ data }) => {
+                setGithub((prevState) => ({
+                    ...prevState,
+                    starred:data,
+                }))
+            })
+    }
     const contextValue = {
         gitHub,
         getUser: useCallback((username) => getUser(username), []),
         getUserRepos: useCallback((username) => getUserRepos(username), []),
+        getUserStarred: useCallback((username) => getUserStarred(username), []),
     }
     return (
         <GithubContext.Provider value={contextValue}>

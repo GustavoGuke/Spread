@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import {Tabs, TabList, Tab, TabPanel,} from "react-tabs"
+import { Tabs, TabList, Tab, TabPanel, } from "react-tabs"
 
 export const ContaierTabs = styled(Tabs)`
 font-size: 1em;
-width: 50%;
+width: 100%;
 `
 
 export const ContaierTabList = styled(TabList)`
@@ -53,3 +53,11 @@ export const ContaierTabPanel = styled(TabPanel)`
     }
 `
 ContaierTabList.TabsRole = 'TabPanel'
+
+export const WrapperList = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+`
