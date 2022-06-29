@@ -1,0 +1,11 @@
+CREATE DATABASE TESTE;
+USE TESTE;
+
+CREATE TABLE coletor(
+ id INT NOT NULL PRIMARY KEY,
+ descricao VARCHAR (50) NOT NULL,
+ status_imob VARCHAR (20) NOT NULL,
+ localiza VARCHAR (50) NOT NULL
+);
+
+SELECT * FROM coletor ORDER BY id;

@@ -1,11 +1,11 @@
-const pg = require('pg')
+const { Client } = require('pg')
 
-const client = new pg.Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'postgres',
-  password: 'postgres',
-  port: 5432,
+const connectionString = `postgres://hlyyonpv:Tje_34ji3lyuAdMrwQX2XV6BoWqjcEAW@motty.db.elephantsql.com/hlyyonpv`
+const client = new Client({
+  connectionString,
 })
 
-module.exports = client
+client.query('SELECT now()',(err, res) => {
+  console.log(res.rows)
+  client.end()
+})
